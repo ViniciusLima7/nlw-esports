@@ -1,5 +1,7 @@
+import "./styles/main.css";
+
 function App() {
-  return <h1>Opaaa</h1>;
+  return <div className=""></div>;
 }
 
 export default App;
