@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { CreateAdModal } from "./components/CreateAdModal";
 import CreateAdBanner from "./components/CreateAdBanner";
 import * as Dialog from "@radix-ui/react-dialog";
+import axios from "axios";
 
 export interface Game {
   id: string;
@@ -19,11 +20,9 @@ function App() {
   const [games, setGames] = useState<Game[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3333/games")
-      .then((res) => res.json())
-      .then((data) => {
-        setGames(data);
-      });
+    axios("http://localhost:3333/games").then((res) => {
+      setGames(res.data);
+    });
   }, []);
 
   return (
