@@ -6,7 +6,7 @@ import { CreateAdModal } from "./components/CreateAdModal";
 import CreateAdBanner from "./components/CreateAdBanner";
 import * as Dialog from "@radix-ui/react-dialog";
 
-interface Game {
+export interface Game {
   id: string;
   title: string;
   bannerUrl: string;
